@@ -2,6 +2,10 @@
 # mapIt.py - Launches a map in the browser using an address from the
 # command line or clipboard.
 
+#add feauture - gives list of popular food items from the chosen restaurant
+#add feauture - attractions in the area
+#add feauture - give capital if given country
+
 import webbrowser, sys, pyperclip
 
 if len(sys.argv) > 1:
@@ -12,5 +16,5 @@ else:
     address = pyperclip.paste()
 
 print("You must click on search bar and press enter to take you to your desired")
-food = input("Enter a food place in that area:")
+food = input("Enter the name of a restaurant in that area:")
 webbrowser.open('https://www.google.com/maps/place/' + address + ', ' + food)
